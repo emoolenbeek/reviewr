@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ReviewR</title>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">ReviewR</h1>
+        <a href="#myModal" class="btn btn-link btn-nav pull-right">
+            <span class="icon icon-compose"></span>
+        </a>
+    </header>
+
+    <div id="myModal" class="modal">
+        <!--MODAL-->
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" id="x" href="#myModal"></a>
+            <h1 class="title">Add Review</h1>
+        </header>
+
+        <div class="content content-padded">
+            <form class="input-group">
+                <div class="input-row">
+                    <label>Item</label>
+                    <input id="item" type="text" placeholder="ex: Timmies coffee">
+                </div>
+                <div class="media-body"><img src="" id="imgModal"></div>
+                <div class="input-row" id="myStar">
+                    <div class="stars">
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-positive btn-block" id="picture"><span class="icon icon-play"></span> Take Picture</button>
+
+            <button class="btn btn-block" id="cancel"><span class="icon icon-close"></span> Cancel</button>
+
+
+            <button class="btn btn-primary btn-block" id="save"><span class="icon icon-check"></span> Save</button>
+
+
+        </div>
+    </div>
+    <!--MODAL-->
+
+    <div class="content" id="output">
+        <!--OUTPUT-->
+        <ul class="table-view" id="reviews"> </ul>
+
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/ratchet.min.js"></script>
+    <!--    <script src="js/main.js"></script>-->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
